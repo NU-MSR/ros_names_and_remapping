@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>ros_names_and_remapping</name>
+  <version>0.0.1</version>
+  <description>
+	A simple package for illustrating how ROS graph resource names, remapping, and launch files work.
+  </description>
+
+  <maintainer email="jschultz@northwestern.edu">jarvis</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">http://nu-msr.github.io/embedded-course-site/notes/5_names_launch.html</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+
+  <export>
+  </export>
+</package>
