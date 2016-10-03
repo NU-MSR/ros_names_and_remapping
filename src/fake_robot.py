@@ -99,6 +99,10 @@ if __name__ == '__main__':
     # now let's read a non-private parameter telling us the name of the robot:
     robot_name = rospy.get_param("robot_name", "DEFAULT_ROBOT")
 
+    # let's print the values of the parameters that were received:
+    print "timestep = ",dt
+    print "robot name = ",robot_name
+
     # now let's create a timer that publishes the fake range at the freq
     # specified by private parameter:
     range_timer = rospy.Timer(rospy.Duration(dt), range_callback)
