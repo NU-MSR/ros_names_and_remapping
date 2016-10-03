@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- This launch file illustrates how we can start things in a launch file by
+       remapping arguments. This is not the typical use case, you'd likely be
+       better off using namespaces to keep these nodes separated. Remapping is
+       most often used just to change a default name. -->
+
+
+  <!-- start robot 1 -->
+  <node name="robot_1" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	<remap from="controls" to="controls_1" />
+	<remap from="range" to="range_1" />
+  </node>
+  <node name="controller_1" pkg="turtlesim" type="turtle_teleop_key"
+		output="screen" launch-prefix="xterm -e" >
+	<remap from="turtle1/cmd_vel" to="controls_1" />
+  </node>
+
+
+  <!-- start robot 2 -->
+  <node name="robot_2" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	<remap from="controls" to="controls_2" />
+	<remap from="range" to="range_2" />
+  </node>
+  <node name="controller_2" pkg="turtlesim" type="turtle_teleop_key"
+		output="screen" launch-prefix="xterm -e" >
+	<remap from="turtle1/cmd_vel" to="controls_2" />
+  </node>
+  
+  <!-- start robot 3 -->
+  <node name="robot_3" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	<remap from="controls" to="controls_3" />
+	<remap from="range" to="range_3" />
+  </node>
+  <node name="controller_3" pkg="turtlesim" type="turtle_teleop_key"
+		output="screen" launch-prefix="xterm -e" >
+	<remap from="turtle1/cmd_vel" to="controls_3" />
+  </node>
+  
+
+</launch>

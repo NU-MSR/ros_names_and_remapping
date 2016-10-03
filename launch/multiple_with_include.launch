@@ -1,8 +1,6 @@
 <launch>
   <!-- This launch file illustrates how we can start things in a launch file by
-       remapping arguments. This is not the typical use case, you'd likely be
-       better off using namespaces to keep these nodes separated. Remapping is
-       most often used just to change a default name. -->
+       including other launch files. -->
   <arg name="robot_base_name" default="default_name" doc="Set the base name of each robot" />
   <arg name="robot_name" default="default_name" doc="Set the name of the robot" />
   <arg name="timestep" default="0.1" doc="Set the period of the fake range publishing in seconds for all robots" />

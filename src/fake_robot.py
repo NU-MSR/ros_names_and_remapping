@@ -11,7 +11,7 @@ import random
 DT = 0.1
 
 def control_callback(data):
-    rospy.loginfo("received command: (v=%d, w=%d)", data.linear.x, data.angular.z)
+    rospy.loginfo("[%s] received command: (v=%d, w=%d)", rospy.get_name(), data.linear.x, data.angular.z)
     return
 
 def range_callback(event):
