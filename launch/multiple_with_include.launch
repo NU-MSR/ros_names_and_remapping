@@ -1,0 +1,7 @@
+<launch>
+  <!-- This launch file illustrates how we can start things in a launch file by
+       remapping arguments. This is not the typical use case, you'd likely be
+       better off using namespaces to keep these nodes separated. Remapping is
+       most often used just to change a default name. -->
+  
+</launch>

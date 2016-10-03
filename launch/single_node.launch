@@ -1,0 +1,14 @@
+<launch>
+  <!-- This is the simplest launch file. It starts a single instance of the demo. -->
+
+  <!-- There are several things to note about the following attributes: (i) 'name' -->
+  <!-- sets that graph resource name of the node. It automatically overrides any -->
+  <!-- values set in the code (inside of 'init_node' for example). (ii) 'pkg' is -->
+  <!-- simply the name of the package that contains the node (iii) 'type' is the name -->
+  <!-- of the executable that should be run to start the node. In Python, this will -->
+  <!-- just be the name of the Python script. In C++, this is the name of the -->
+  <!-- executable compiled by catkin. (iv) There are several other very useful -->
+  <!-- attributes that you should read about. For example, 'respawn', 'args', 'ns', -->
+  <!-- 'output', and 'launch-prefix' -->
+  <node name="fake_1" pkg="ros_names_and_remapping" type="fake_robot.py" />
+</launch>

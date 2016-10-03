@@ -1,0 +1,19 @@
+<launch>
+  <!-- This launch file shows how we can set parameters from the launch file and
+       how we can incorporate arguments to allow the parameter values to be
+       changed at the command line. -->
+
+  <!-- define arguments: -->
+  <arg name="robot_name" default="default_name" doc="Set the name of the robot" />
+  <arg name="timestep" default="0.1" doc="Set the period of the fake range publishing in seconds." />
+  <!-- note that we could view the documentation for these args with the following command: -->
+  <!-- 'roslaunch single_node_with_params_and_args.launch \-\-ros-args' (would
+       need to unescape the dashes in the ros-args switch) -->
+  
+  <param name="robot_name" value="$(arg robot_name)" type="str" />
+  
+  <node name="fake_1" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	<param name="timestep" value="$(arg timestep)" type="double" />
+  </node>
+  
+</launch>
