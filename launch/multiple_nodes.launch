@@ -1,5 +1,19 @@
 <launch>
   <!-- This launch file illustrates how we can start many things in a single
        launch file, and keep things encapsulated. -->
-  
+
+  <group ns="robot_1" >
+	<param name="robot_name" value="rob_ott" type="str" />
+	<node name="fake_1" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	  <param name="timestep" value="0.01" type="double" />
+	</node>
+  </group>
+
+  <group ns="robot_2" >
+	<param name="robot_name" value="rob_ott" type="str" />
+	<node name="fake_1" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
+	  <param name="timestep" value="0.01" type="double" />
+	</node>
+  </group>
+
 </launch>

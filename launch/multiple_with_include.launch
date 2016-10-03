@@ -3,5 +3,29 @@
        remapping arguments. This is not the typical use case, you'd likely be
        better off using namespaces to keep these nodes separated. Remapping is
        most often used just to change a default name. -->
-  
+  <arg name="robot_base_name" default="default_name" doc="Set the base name of each robot" />
+  <arg name="robot_name" default="default_name" doc="Set the name of the robot" />
+  <arg name="timestep" default="0.1" doc="Set the period of the fake range publishing in seconds for all robots" />
+
+  <!-- we can explicitly set which args get passed on: -->
+  <include ns="$(arg robot_base_name)_1" file="$(find ros_names_and_remapping)/launch/single_node_with_params_and_args.launch">
+	<arg name="timestep" value="$(arg timestep)" />
+	<arg name="robot_name" value="$(arg robot_name)" />
+  </include>
+
+  <include ns="$(arg robot_base_name)_2" file="$(find ros_names_and_remapping)/launch/single_node_with_params_and_args.launch">
+	<arg name="timestep" value="$(arg timestep)" />
+	<arg name="robot_name" value="$(arg robot_name)" />
+  </include>
+
+  <!-- You should always use $(find) substitution arg instead of using absolute paths : -->
+  <include ns="$(arg robot_base_name)_3" file="$(find ros_names_and_remapping)/launch/single_node_with_params_and_args.launch">
+	<arg name="timestep" value="$(arg timestep)" />
+	<arg name="robot_name" value="$(arg robot_name)" />
+  </include>
+
+    <!-- if all arguments are the same, we can use the 'pass_all_args' attribute
+         of <include> tag. Can't use it in this example because robot_base_name
+         doesn't exist in other launch file.-->
+
 </launch>

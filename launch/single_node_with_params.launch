@@ -3,7 +3,7 @@
 
   <!-- let's set the global parameter: -->
   <param name="robot_name" value="rob_ott" type="str" />
-  
+
   <!-- Setting output='screen' is how we make sure we can see print and log
        statements. By default, all printing in a launch file just goes to log
        files. -->
@@ -22,5 +22,5 @@
   <!-- <group ns="fake_1"> -->
   <!-- 	<param name="timestep" value="0.03" type="double" /> -->
   <!-- </group> -->
-  
+
 </launch>
