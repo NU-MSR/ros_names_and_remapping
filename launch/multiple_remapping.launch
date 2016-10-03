@@ -10,6 +10,7 @@
   <node name="robot_1" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
 	<remap from="controls" to="controls_1" />
 	<remap from="range" to="range_1" />
+	<remap from="ros_introspection" to="introspection_1" />
   </node>
   <node name="controller_1" pkg="turtlesim" type="turtle_teleop_key"
 		output="screen" launch-prefix="xterm -e" >
@@ -21,6 +22,7 @@
   <node name="robot_2" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
 	<remap from="controls" to="controls_2" />
 	<remap from="range" to="range_2" />
+	<remap from="ros_introspection" to="introspection_2" />
   </node>
   <node name="controller_2" pkg="turtlesim" type="turtle_teleop_key"
 		output="screen" launch-prefix="xterm -e" >
@@ -31,6 +33,7 @@
   <node name="robot_3" pkg="ros_names_and_remapping" type="fake_robot.py" output="screen">
 	<remap from="controls" to="controls_3" />
 	<remap from="range" to="range_3" />
+	<remap from="ros_introspection" to="introspection_3" />
   </node>
   <node name="controller_3" pkg="turtlesim" type="turtle_teleop_key"
 		output="screen" launch-prefix="xterm -e" >
